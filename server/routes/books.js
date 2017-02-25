@@ -1,3 +1,10 @@
+/*
+  Name: Jonathan Lee #822937603
+  File Name: books.js
+  Website Name: https://comp308-2017-midterm-822937603.herokuapp.com/
+  Description: books routing for the views
+*/
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();
@@ -29,20 +36,13 @@ router.get('/add', (req, res, next) => {
     title: "Add a new book",
     books: ''
   });
-    /*****************
-     * DONE *
-     *****************/
 });
 
 // POST process the Book Details page and create a new Book - CREATE
 router.post('/add', (req, res, next) => {
 
 let newBook = book({
-  //Title: String,
-   // Description: String,
-    //Price: Number,
-   // Author: String,
-  //  Genre: String
+
       "Title": req.body.title,
       "Desciption" : req.body.desciption,
       "Price": req.body.price,
@@ -58,9 +58,6 @@ let newBook = book({
         res.redirect('/books');
       }
     });
-    /*****************
-     * ADD CODE HERE *
-     *****************/
 
 });
 
@@ -81,9 +78,7 @@ router.get('/:id', (req, res, next) => {
         });
       }
     });
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+ 
 });
 
 // POST - process the information passed from the details form and update the document
@@ -109,9 +104,6 @@ router.post('/:id', (req, res, next) => {
         res.redirect('/books');
       }
     });
-    /*****************
-     * ADD CODE HERE *
-     *****************/
 
 });
 
@@ -128,9 +120,7 @@ router.get('/delete/:id', (req, res, next) => {
         res.redirect('/books');
       }
     });
-    /*****************
-     * ADD CODE HERE *
-     *****************/
+
 });
 
 

@@ -1,3 +1,11 @@
+<!--
+
+  Name: Jonathan Lee #822937603
+  File Name: index.ejs
+  Website Name: https://comp308-2017-midterm-822937603.herokuapp.com/
+  Description: index webpage ejs
+
+-->
 <% include ../partials/header.ejs %>
 
     <!-- MAIN CONTENT -->
@@ -5,9 +13,7 @@
       <div class="row">
         <div class="col-md-offset-1 col-md-10">
           <h3>Favourite Books List </h3>
-          <!-- ------------------------ -->
-          <!-- FIX THE ADD BUTTON BELOW -->
-          <!-- ------------------------ -->
+            <!-- fixed the add button -->
           <a href="/books/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
           <br>
           <div class="table-responsive">
@@ -32,19 +38,17 @@
                   <td class="text-center"><%= books[count].Genre %></td>
 
                   <td class="text-center">
+                    <!-- Fixed the edit button -->
                     <a href="/books/<%= books[count]._id %>" class="btn btn-primary">
               <i class="fa fa-pencil-square-o"></i> Edit</a>
-                    <!-- ------------------------ -->
-                    <!-- ADD the EDIT BUTTON HERE -->
-                    <!-- ------------------------ -->
+
                   </td>
 
                   <td class="text-center">
+                    <!-- fixed the delete button -->
                     <a href="/books/delete/<%= books[count]._id %>" class="btn btn-danger">
               <i class="fa fa-trash-o"></i> Delete</a>
-                    <!-- ------------------------ -->
-                    <!-- ADD the DELETE BUTTON HERE -->
-                    <!-- ------------------------ -->
+
                   </td>
                 </tr>
                 <% } %>
